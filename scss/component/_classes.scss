@@ -1,0 +1,78 @@
+@import "../Mixin/fontmixin";
+@import "../Mixin/skill";
+@import "../variable/color";
+@import "../Mixin/button";
+.classes{
+    margin: 100px 0px;
+
+   
+    .row{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+
+        .col-1{
+            width: 35%;
+            height: 200px;
+            .card{
+                display: flex;
+                margin-bottom: 20px;
+                text-align: left;
+                border-radius: 7px;
+                box-shadow: 1px 1px 10px 0px rgb(196, 189, 189);
+                padding: 30px;
+                cursor: pointer;
+                img{
+                    margin-right: 15px;
+                }
+                h2{
+                    @include Font(18px,700,rgb(63, 57, 57));  
+                    align-self: center;
+                }
+                &:first-child{
+                    h2{
+                        color: $span;
+                    }
+                }
+                &:nth-child(5){
+                    @include button($span,25px,none,none);
+                    h2{
+                        color: white;
+                        text-align: center;
+                        margin: 0 auto;
+                    }
+                    &:hover{
+                        opacity: 0.8;
+                    }
+                }
+            }
+          
+        }
+        .col-2{
+            width:60%;
+           img{
+               border-radius: 5px;
+           }
+           h2{
+               margin-top: 30px;
+               text-align: left;
+               color: rgb(56, 50, 50);
+               @include Font(25px,900,rgb(7, 7, 7))
+           }
+           p{
+            text-align: left;
+            margin-top: 10px;
+            @include Font(16px,700,rgb(133, 128, 128))
+           }
+           button{
+            @include button($button,15px,none,white);
+            margin-top: 30px;
+
+            &:hover{
+                opacity: 0.8;
+            }
+           }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+@import "../Mixin/fontmixin";
+@import "../Mixin/skill";
+@import "../variable/color";
+@import "../Mixin/button";
+
+.trainers{
+    .head{
+        padding-top: 100px;
+    }
+    .row{
+        display: flex;
+        margin-top: 50px;
+        height: 500px;
+        justify-content: space-between;
+        .card{
+            background-color: rgb(250, 252, 252);
+            width: 31%;
+            height: 450px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 10px 0px rgb(196, 189, 189);
+
+            .card-content{
+                margin: 0 auto;
+                width: 80%;
+                img{
+                    width: 100%;
+                    margin-top: 30px;
+                    border-radius: 7px;
+                }
+                h5{
+                    @include Font(12px,700,$span);
+                    padding:10px 0px;
+                }
+                h2{
+                    @include Font(20px,700,rgb(77, 73, 73));
+                    padding-bottom:10px;
+                }
+                p{
+                    @include Font(15px,600,rgb(153, 138, 138));
+                    // padding-bottom:10px;
+                }
+                .icons{
+                    display: flex;
+                    justify-content: center;
+                    img{
+                        width: 30px;
+                        padding: 0px 10px;
+                        
+                        &:hover{
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

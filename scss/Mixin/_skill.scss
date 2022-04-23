@@ -1,0 +1,4 @@
+@mixin skill($width, $bg){
+    width: $width;
+    background-color: $bg;
+}

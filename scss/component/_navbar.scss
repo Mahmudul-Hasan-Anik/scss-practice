@@ -1,0 +1,48 @@
+@import "../Mixin/fontmixin";
+@import "../variable/color";
+@import "../Mixin/button";
+nav{
+    background-color: #242C37;  
+    position: fixed;
+    width: 100%;
+    .logo{
+        width: 30%;
+        padding-top: 30px;
+        h2{
+          color: white;
+          font-weight: bold;
+                    
+          }
+        }
+    .nav_menu{
+        width: 70%;
+        padding: 24px 0px;
+        ul{
+          text-align: center;
+            li{
+              list-style: none;
+              display: inline-block;
+              padding: 0px 15px;
+                a{
+                    text-decoration: none;
+                    color:white;
+
+                    &:hover{
+                    color: #f34222;
+                           }
+                  }
+                }
+            button{
+            @include button( $button,15px,none,white);
+            margin-left: 10px;
+
+                    &:hover{
+                        background-color: $button;
+                        box-shadow: 0 0 10px $button, 0 0 40px $button, 0 0 80px $button, 0 0 120px $button ;
+                        }
+                }
+           }
+        }
+}
+  
+    

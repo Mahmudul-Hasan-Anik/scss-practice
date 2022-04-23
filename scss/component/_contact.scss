@@ -1,0 +1,44 @@
+@import "../Mixin/fontmixin";
+@import "../Mixin/skill";
+@import "../variable/color";
+@import "../Mixin/button";
+
+.contact{
+    background-image: url("../img/contact-bg.jpg");
+    background-size: cover;
+    height: 400px;
+    margin-top: 50px;
+    text-align: center;
+    .main{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        form{
+            height: 50%;
+            width: 50%;
+           
+            input{
+                width: 250px;
+                padding: 10px;
+                margin-right: 20px;
+                margin-bottom: 15px;
+                &:nth-child(3){
+                    width: 550px;
+                }
+                &:nth-child(4){
+                    width: 550px;
+                    height: 50px;
+                }
+            }
+        }
+        button{
+            @include button($button,15px,none,white);
+            &:hover{
+                opacity: .9;
+            }
+        }
+    }
+}

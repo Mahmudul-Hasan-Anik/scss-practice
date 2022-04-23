@@ -1,0 +1,40 @@
+@import "../variable/color";
+@import "../Mixin/fontmixin";
+*{
+    margin: 0px;
+    padding: 0px;
+    outline: 0px;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+.main{
+    width: 80%;
+    margin: 0 auto;
+}
+span{
+   color:#ED563B;
+}
+body{
+    background-color:$PrimaryBody;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.head{
+    text-align: center;
+
+    h2{
+     @include Font(30px,900,black);
+     margin-bottom: 10px;
+   }
+   .heading-content{
+       @include Font(18px,300,rgb(71, 68, 68));
+       padding-top: 10px;
+   }
+}
+
+
+// @media (min-width: 400px) {
+//     display: flex;
+// }

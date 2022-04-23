@@ -1,0 +1,43 @@
+@import "../Mixin/fontmixin";
+@import "../Mixin/skill";
+@import "../variable/color";
+.about{
+    margin: 100px 0px;
+    text-align: center;
+    .row{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+
+        .col-1, .col-2{
+            width: 47%;
+
+            img{
+                margin-right: 25px;
+            }
+        }
+        .card{
+            display: flex;
+            margin: 40px 0px;
+
+            .content{
+                text-align: left;
+
+                h4{
+                    @include Font(20px,900,rgb(63, 57, 57));  
+                }
+                p{
+                    padding:10px 0px 10px 0px;
+                    @include Font(14px,700,rgb(133, 128, 128))
+                }
+                a{
+                    @include Font(12px,700,none);
+                    text-decoration: none;
+                    color: $span;
+                }
+            }
+        }
+    }
+}
+    
